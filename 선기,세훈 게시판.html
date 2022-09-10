@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>여행 할때 여기어때</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./FlexSlider/jquery.flexslider.js"></script>
+	<script src="/resource/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="./FlexSlider/flexslider.css" type="text/css">
+	<script src="./js/jquery-scrollbar.js"></script>
+	<link rel="stylesheet" href="css/swiper.css" type="text/css">
+	<link rel="stylesheet" href="css/swiper.min.css" type="text/css">
+	<script src="js/swiper.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		
+
+		$(function () {
+			$("#progress-bar").onscroll({ backgroundColor: "rgb(3,101,125)", height: "2px", position: "fixed" });
+		});
+
+
+		
+
+		
+
+
+
+		$(document).ready(function () {
+			var jbOffset = $('.jbTitle').offset();
+			$(window).scroll(function () {
+				if ($(document).scrollTop() > jbOffset.top) {
+					$('.jbTitle').addClass('jbFixed','adda');
+				}
+				else {
+					$('.jbTitle').removeClass('jbFixed','adda');
+				}
+			});
+		});
+
+		$(document).ready(
+			function(){
+				$('.Evn-hover').hover(
+				function(){
+					$('.add').css('display','block');
+				},
+				function(){
+					$('.add').css('display','none');
+				});
+			});
+
+
+	</script>
+	<style>
+		@charset "UTF-8";
+
+		* {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: whitesmoke;
+			font-family: "맑은고딕";
+		}
+		a {
+			text-decoration: none;
+			color: rgba(0,0,0,0.87);
+		}
+		.adda{ color: black;
+
+		}
+		.main_box{
+			
+			/* border: 1px solid red; */
+		}
+		.main_box li{
+			padding: 10px 20px 10px 20px;
+			display: inline-block;
+		}
+		.main_box li a{
+			color: rgba(0,0,0,0.87);
+		}
+		
+
+		.side_menu{
+			/* width : 220px ; 
+			float : left; 
+			margin : 70px 0;  */
+		}
+		.side_menu li{
+			padding: 20px;
+		}
+		.side_menu li a{
+			color: rgba(0,0,0,0.87);
+		}
+		#mainsection{
+			margin: 0 auto;
+			width: 1200px;
+			margin-top: 40px;
+			/* display: flex; */
+			/* align-items: center; */
+		}
+
+
+		
+
+		header {
+			border-bottom: 3px solid rgb(3,101,125);
+			background-color:white;
+			z-index: 1;
+		}
+
+		#main_menu {
+			align-items: center;
+			display: flex;
+		}
+
+		#main_menu li a {
+			color:rgb(26, 20, 73);
+			min-height: 30px;
+			display: block;
+		}
+
+		#main_menu li a:hover {
+			color: gray;
+			
+		}
+
+		#main_menu li a:active {
+			text-decoration: none;
+		}
+
+		#main_menu li a:link {
+			/* color: black; */
+			text-decoration: none;
+		}
+		#main_menu li {
+			position: relative;
+		}
+		#main_menu li .add {
+			position: absolute;
+			width: 184px;
+			top: 30px;
+			left: -40px;
+			z-index: 100;
+			border-radius: 5px;
+			background: #fff;
+			padding: 30px;
+			display: none;
+		}
+		#main_menu li .add li {
+			width: auto;
+			margin-bottom: 14px;
+			font-size: 16px;
+		}
+		#main_menu li .add li:last-child {
+			margin-bottom: 0;
+		}
+
+		
+
+		@keyframes scale {
+			0% {
+				transform: scale(1);
+				opacity: 0;
+			}
+
+			100% {
+				transform: scale(1.2);
+				opacity: 1;
+			}
+		}
+
+		section {
+			margin-top: 50px;
+		}
+		.box {
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			/* transform: translate(-50%, -50%); */
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+		.main_text{
+			border: 1px solid red;
+			width: ;
+		}
+
+		.box1 {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			padding: 0 20px;
+			justify-content: space-between;
+			padding: 20px;
+		}
+
+		.logo {
+			float: left;
+			color: rgb(26, 20, 73);
+			padding-left: 70px;
+			width:200px
+		}
+
+		#menu {
+			float: right;
+			text-align: right;
+			padding-right: 70px;
+			left:30px
+		}
+
+		#main_menu li {
+			width: 100px;
+			font-weight: bold;
+			font-size: 20px;
+			color: black;
+		}
+
+		#main_menu li:first-child {
+			width: auto;
+		}
+
+
+		li {
+			list-style-type: none;
+		}
+
+		.main_link {
+			background:#fff;
+			border-radius: 15px;
+		}
+
+		.main_link ul {
+			display: flex;
+			align-items: center;
+			padding: 60px;
+		}
+
+		.main_link li {
+			width: 150px;
+		}
+
+		.main_link li a {
+			display: block;
+			height: 107px;
+			font-size: 18px;
+			color: black;
+			text-align: center
+		}
+
+		.main_link li a span {
+			display: inline-block;
+			width: 72px;
+			height: 72px;
+			margin: 0 auto;
+		}
+
+		.main_link li a p {
+			height: auto;
+			padding-top: 14px;
+		}
+
+		.main_link .ico_01 {
+			background-image: url(./img/bed.png);
+			background-size: 75px auto;
+		}
+
+		.main_link .ico_02 {
+			background-image: url(./img/apartment.png);
+			background-size: 75px auto;
+		}
+
+		.main_link .ico_03 {
+			background-image: url(./img/building.png);
+			background-size: 75px auto;
+		}
+
+		.main_link .ico_04 {
+			background: url(./img/navigator.png);
+			background-size: 75px auto
+		}
+
+		/* .e {float: left;  } */
+
+
+
+		#main {
+			width: 840px;
+			float: right;
+			margin: 70px 0;
+		}
+
+		/* footer { height : 260px; background-color : gray; color : white; clear : both; height : 120px; } */
+		footer {
+			overflow: hidden;
+			clear: both;
+			position: relative;
+			padding: 63px 31px 40px 31px;
+			background-color: rgb(245, 245, 245);
+			font-size: 10px;
+			line-height: 16px;
+			color: rgba(0, 0, 0, 0.38);
+			clear: both;
+		}
+
+		footer a {
+			color: rgba(0, 0, 0, 0.38)
+		}
+
+		footer .link li {
+			float: left;
+			margin-bottom: 13px;
+			line-height: normal
+		}
+
+		footer .link li a {
+			display: inline-block;
+		}
+
+		footer .link li button {
+			padding: 0;
+			border: none;
+			background: none;
+			font-size: 10px;
+			line-height: 1;
+			color: rgba(0, 0, 0, 0.38);
+		}
+
+		footer .link li span {
+			display: inline-block;
+			width: 24px;
+			text-align: center
+		}
+
+		footer .link li:nth-of-type(3) a {
+			color: rgba(0, 0, 0, 0.87);
+		}
+
+		footer .link li:nth-child(4) span,
+		footer .link li:nth-child(7) span {
+			display: none
+		}
+
+		footer .link li:nth-child(5),
+		footer .link li:nth-child(8) {
+			clear: both
+		}
+
+		footer .link li:last-child {
+			margin-bottom: 0
+		}
+
+		footer p {
+			clear: both;
+			padding: 27px 0 27px 0;
+			text-align: left;
+		}
+
+		footer p b,
+		footer p span {
+			display: inline-block
+		}
+
+		footer address {
+			text-align: left;
+			font-style: normal;
+		}
+
+		footer address span {
+			padding-bottom: 6px
+		}
+
+		footer address .order {
+			padding: 6px 0;
+		}
+
+		footer .ico {
+			overflow: hidden;
+			margin-top: 20px;
+			padding: 20px 0 5px 0;
+			border-top: 1px solid rgba(0, 0, 0, 0.04)
+		}
+
+		footer .ico a {
+			display: inline-block;
+			float: left;
+			margin-right: 10px;
+			font-size: 22px;
+			color: rgba(0, 0, 0, 0.48)
+		}
+
+		footer .ico span {
+			display: inline-block;
+			overflow: hidden;
+			width: 0;
+			text-indent: -9999px
+		}
+
+		.jbTitle {
+			z-index: 3;
+			text-align: center;
+			width: 100%;
+		}
+
+
+		.jbFixed  {
+			z-index: 2;
+			position: fixed;
+			top: 0px;
+			background-color: white;
+			color: #459D91;
+		}
+
+		/* start */
+		.section_wrap {
+			display: flex;
+		}
+		.section_wrap .side_menu {
+			width: 20%;
+		}
+		.section_wrap .side_menu ul {}
+		.section_wrap .side_menu ul li {
+			padding: 20px;
+			text-align: left;
+		}
+		.section_wrap .side_menu ul li a {}
+
+		
+		.section_wrap .section_box {
+			width: 80%;
+		}
+		.section_wrap .section_box .sub_title {
+			display: flex; 
+			align-items: center;
+			border-bottom: 1px solid red;
+			padding-bottom: 20px;
+		}
+		.section_wrap .section_box .sub_title li {
+			width: 100px;
+		}
+
+		.section_wrap .section_box .section_container {}
+		.section_wrap .section_box .section_container .title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.section_wrap .section_box .section_container .section_list {
+			
+		}
+
+		.section_wrap .section_box .section_container .section_list ul {}
+		.section_wrap .section_box .section_container .section_list ul li {
+		}
+		.section_wrap .section_box .section_container .section_list ul li .area {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.section_wrap .section_box .section_container .section_list ul li ul {
+		}
+		.section_wrap .section_box .section_container .section_list ul li ul li {
+		}
+
+		/* end */
+	</style>
+	<script src="https://kit.fontawesome.com/def66b134a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	
+
+	</div>
+	<div id="container" class="jbTitle">
+		<!-- 상단 헤더  -->
+		<header class="jbTitle">
+			<div id="progress-bar"></div>
+			<div class="box1">
+				
+				<img class="logo" src="./img/logo.png" style="width:200px">
+				<nav id="menu">
+
+					<ul id="main_menu" class="adda">
+						<li >
+							<a href="" class="adda">내주변</a>
+						</li>
+						<li >
+							<a href="" class="adda">예약내역</a>
+						</li>
+						<li >
+							<a href="javascript:;" class="Evn-hover" class="adda">
+								더보기
+								<ul class="add">
+									<li>공지사항</li>
+									<li>이벤트</li>
+									<li>약관및정책</li>
+									<li>문의사항</li>
+								</ul>
+							</a>
+							
+						</li>
+						<li>
+							<a href="" class="adda">로그인</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+	</div>
+	</header>
+	<!-- 메인  -->
+	<section id="mainsection">
+		
+		
+
+		<!-- start -->
+		<div class="section_wrap">
+			<div class="side_menu">
+				<ul>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">이벤트</a></li>
+					<li><a href="#">약관 및 정책</a></li>
+					<li><a href="#">채용약관</a></li>
+				</ul>
+			</div>
+			<div class="section_box">
+				<ul class="sub_title">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">위치</a></li>
+					<li><a href="#">개인</a></li>
+					<li><a href="#">청소년</a></li>
+					<li><a href="#">소비자</a></li>
+				</ul>
+
+				<div class="section_container">
+					<div class="title">
+						<h3> 이용약관</h3>
+						<div>셀렉트 박스 영역</div>
+					</div>
+					<div class="section_list">
+						<ul>
+							<li>
+								<div class="area">
+									<p>제목</p>
+									<p>화살표</p>
+								</div>
+								<ul>
+									<li>내용</li>
+								</ul>
+							</li>
+							<li>
+								<div class="area">
+									<p>제목</p>
+									<p>화살표</p>
+								</div>
+								<ul>
+									<li> 내용</li>
+								</ul>
+							</li>
+							<li>
+								<div class="area">
+									<p>제목</p>
+									<p>화살표</p>
+								</div>
+								<ul>
+									<li> 내용</li>
+								</ul>
+							</li>
+							<li>
+								<div class="area">
+									<p>제목</p>
+									<p>화살표</p>
+								</div>
+								<ul>
+									<li> 내용</li>
+								</ul>
+							</li>
+							<li>
+								<div class="area">
+									<p>제목</p>
+									<p>화살표</p>
+								</div>
+								<ul>
+									<li>-----------</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end -->
+	</section>
+
+
+
+	<footer>
+		<!-- Footer -->
+		<div class="box2">
+			<ul class="link">
+				<li><a href="http://www.withinnovation.co.kr/" target="_blank">회사소개</a><span>|</span></li>
+				<li><a href="https://www.goodchoice.kr/more/terms" data-default="term">이용약관</a><span>|</span></li>
+				<li><a href="https://www.goodchoice.kr/more/terms/privacy"
+						data-default="privacy">개인정보처리방침</a><span>|</span></li>
+				<li><a href="https://www.goodchoice.kr/more/terms/consumer" data-default="consumer">소비자 분쟁해결
+						기준</a><span>|</span></li>
+				<li><button type="button" onclick="pop_licence();return false;">사업자 정보확인</button><span>|</span></li>
+				<li><a href="//ad.goodchoice.kr/" target="_blank">여기어때 마케팅센터</a><span>|</span></li>
+				<li><a href="//host.goodchoice.kr/" target="_blank">액티비티 호스트센터</a><span>|</span></li>
+				<li><a href="//hotel.goodchoice.kr/" target="_blank">HOTEL 여기어때</a><span>|</span></li>
+				<li><a href="https://www.goodchoice.kr/more/contentsInfo">콘텐츠산업진흥법에의한 표시</a></li>
+			</ul>
+			<p><b>고객행복센터 1588-5890</b><span>오전 9시 - 오후 6시</span></p>
+			<address>
+				<span>코리아IT아카데미</span>
+				주소 : 서울특별시 마포구 서강로 136 아이비타워 2,3층 | 대표이사 : 정해승 | <br>
+				통신판매업번호 : 2015 - 서울강남 - 03148호 | 전화번호 : 1588-5890| E-mail : koreais@koreaedugroup.com<br>
+				<span>(주) 여기어때컴퍼니는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</span><br>
+				copyright ⓒ 2015 KOREA INFORMATION TECHNOLOGY ACADEMY. ALL RIGHTS RESERVED
+			</address>
+
+			<div>
+				<a href="//www.facebook.com/goodchoiceofficial" target="_black"
+					class="icon-icn_login_facebook"><span>여기어때 페이스북</span></a>
+				<a href="//blog.gccompany.co.kr" target="_black" class="icon-ic_blog"><span>여기어때 블로그</span></a>
+				<a href="//post.naver.com/my.nhn?memberNo=25599212" target="_black"
+					class="icon-ic_naverpost"><span>네이버포스트</span></a>
+			</div>
+
+		</div>
+
+	</footer>
+	</div>
+</body>
+
+</html>
